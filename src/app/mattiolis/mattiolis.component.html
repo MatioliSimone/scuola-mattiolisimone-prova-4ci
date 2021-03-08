@@ -44,7 +44,7 @@
 <h2 *ngIf="numero % 5; else elseBlock"></h2>
 
 <ng-template #elseBlock>
-  <h2>
+  <h2 *ngIf="numero != 0">
     <font color="grey" face="”Arial”">è un multiplo di 5</font>
   </h2>
 </ng-template>
