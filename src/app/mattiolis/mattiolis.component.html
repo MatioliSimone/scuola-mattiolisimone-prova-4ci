@@ -1,0 +1,50 @@
+<h1 align="center">CONTATORE:</h1>
+
+<div id="buttoncontainer">
+  <button style="background-color:red" (click)="decrementa()">
+    Decrementa
+  </button>
+  <button style="background-color:green" (click)="Icrementa()">
+    Incrementa
+  </button>
+  <button style="background-color:#007fff" (click)="Raddoppia()">
+    Raddoppia
+  </button>
+  <button style="background-color:purple" (click)="Dimezza()">
+    Dimezza
+  </button>
+  <p>
+    <button style="background-color:chocolate" (click)="Dividi()">
+      Dividi per
+    </button>
+    <select [(ngModel)]="divisore">
+      <option value="3">3</option>
+      <option value="5">5</option>
+      <option value="9">9</option>
+    </select>
+
+    <button style="background-color:darkred" (click)="Moltiplica()">
+      Moltiplica per
+    </button>
+    <select [(ngModel)]="moltiplicatore">
+      <option value="3">3</option>
+      <option value="5">5</option>
+      <option value="9">9</option>
+    </select>
+  </p>
+  <button style="background-color:" (click)="Azzera()">
+    Azzera
+  </button>
+</div>
+
+<h2>
+  <font [color]="colore">{{numero}}</font>
+</h2>
+
+<h2 *ngIf="numero % 5; else elseBlock"></h2>
+
+<ng-template #elseBlock>
+  <h2>
+    <font color="grey" face="”Arial”">è un multiplo di 5</font>
+  </h2>
+</ng-template>
